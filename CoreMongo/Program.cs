@@ -9,6 +9,8 @@ builder.Services.Configure<BookStoreDatabaseSettings>(
 
 builder.Services.AddSingleton<BooksService>();
 
+//Authentication JWT Bearer
+builder.Services.AddAuthentication().AddJwtBearer();
 
 builder.Services.AddControllers()
     .AddJsonOptions(

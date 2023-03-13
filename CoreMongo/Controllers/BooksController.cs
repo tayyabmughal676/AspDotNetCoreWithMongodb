@@ -1,12 +1,14 @@
 ﻿using BookStoreApi.Models;
 using BookStoreApi.Services;
 using CoreMongo.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStoreApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class BooksController : ControllerBase
 {
     private readonly BooksService _booksService;
